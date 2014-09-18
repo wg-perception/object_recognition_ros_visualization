@@ -14,6 +14,9 @@ find_package(Boost REQUIRED system filesystem serialization)
 
 add_subdirectory(src)
 
+# add docs
+ecto_sphinx(${CMAKE_CURRENT_SOURCE_DIR}/doc/source doc)
+
 # install
 install(FILES ork_rviz_plugin.xml
         DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}
