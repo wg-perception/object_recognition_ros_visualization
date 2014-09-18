@@ -17,10 +17,10 @@ set(SOURCE_FILES
   ${MOC_FILES}
 )
 
-add_library(${PROJECT_NAME}_rviz ${SOURCE_FILES})
-target_link_libraries(${PROJECT_NAME}_rviz ${catkin_LIBRARIES}
+add_library(${PROJECT_NAME} ${SOURCE_FILES})
+target_link_libraries(${PROJECT_NAME} ${catkin_LIBRARIES}
                                            object_information_cache
                                            ${QT_LIBRARIES}
 )
-install(TARGETS ${PROJECT_NAME}_rviz
+install(TARGETS ${PROJECT_NAME}
   DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION})

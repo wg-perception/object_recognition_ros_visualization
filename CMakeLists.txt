@@ -18,8 +18,3 @@ add_subdirectory(src)
 install(FILES ork_rviz_plugin.xml
         DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}
 )
-
-# install the include dirs
-#install(DIRECTORY ${PROJECT_SOURCE_DIR}/include/${PROJECT_NAME}/
-#        DESTINATION ${CATKIN_PACKAGE_INCLUDE_DESTINATION}
-#)

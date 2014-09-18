@@ -1,4 +1,4 @@
-<library path="libobject_recognition_ros_rviz">
+<library path="libobject_recognition_ros_visualization">
   <class name="object_recognition_ros/OrkObject"
          type="object_recognition_ros::OrkObjectDisplay"
          base_class_type="rviz::Display">
