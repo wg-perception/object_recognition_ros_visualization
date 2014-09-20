@@ -21,8 +21,6 @@
   <run_depend>pluginlib</run_depend>
   <run_depend>rviz</run_depend>
 
-  <test_depend>visualization_msgs</test_depend>
-
   <buildtool_depend>catkin</buildtool_depend>
 
   <export>

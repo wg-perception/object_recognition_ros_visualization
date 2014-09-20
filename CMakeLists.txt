@@ -1,10 +1,7 @@
 cmake_minimum_required(VERSION 2.8)
 project(object_recognition_ros_visualization)
 
-find_package(catkin REQUIRED cmake_modules geometric_shapes geometry_msgs object_recognition_ros
-                             object_recognition_msgs pluginlib rosbag roscpp rviz sensor_msgs tf
-                             visualization_msgs
-)
+find_package(catkin REQUIRED object_recognition_ros object_recognition_msgs pluginlib rviz)
 catkin_package()
 
 # build some cells
