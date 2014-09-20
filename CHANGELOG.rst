@@ -2,8 +2,8 @@
 Changelog for package object_recognition_ros_visualization
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+0.3.5 (2014-09-20)
+------------------
 * remove useless dependency
 * Contributors: Vincent Rabaud
 

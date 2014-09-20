@@ -1,6 +1,6 @@
 <package>
   <name>object_recognition_ros_visualization</name>
-  <version>0.3.4</version>
+  <version>0.3.5</version>
   <description>object_recognition_ros_visualization contains rviz plugins to visualize ork detection results</description>
   <author email="erublee@willowgarage.com">Ethan Rublee</author>
   <author email="vincent.rabaud@gmail.com">Vincent Rabaud</author>
