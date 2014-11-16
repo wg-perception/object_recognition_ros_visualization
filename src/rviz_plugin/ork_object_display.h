@@ -33,7 +33,10 @@
 #include <rviz/message_filter_display.h>
 
 #include <object_recognition_msgs/RecognizedObjectArray.h>
+
+#ifndef Q_MOC_RUN
 #include <object_recognition_ros/object_info_cache.h>
+#endif
 
 namespace object_recognition_ros
 {
