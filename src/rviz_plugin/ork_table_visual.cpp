@@ -70,7 +70,7 @@ OrkTableVisual::~OrkTableVisual()
 
 void
 OrkTableVisual::setMessage(const object_recognition_msgs::Table& table, bool do_display_hull, bool do_display_bounding_box,
-                           bool do_display_top)
+                           bool do_display_top, const Ogre::ColourValue& color)
 {
   Ogre::Vector3 position(table.pose.position.x,
                          table.pose.position.y,
@@ -89,7 +89,6 @@ OrkTableVisual::setMessage(const object_recognition_msgs::Table& table, bool do_
   // Set the arrow on the object
   if (do_display_top) {
     arrow_->setScale(Ogre::Vector3(0.2, 0.2, 0.2));
-    arrow_->setColor(0.0, 1.0, 1.0, 1.0);
     arrow_->setDirection(Ogre::Vector3(0, 0, 1));
   } else
     arrow_->setScale(Ogre::Vector3(0, 0, 0));
@@ -133,9 +132,17 @@ OrkTableVisual::setMessage(const object_recognition_msgs::Table& table, bool do_
     for (size_t i = 0; i < table.convex_hull.size(); ++i)
       convex_hull_->addPoint(Ogre::Vector3(table.convex_hull[i].x, table.convex_hull[i].y, 0));
     convex_hull_->addPoint(Ogre::Vector3(table.convex_hull[0].x, table.convex_hull[0].y, 0));
-    convex_hull_->setColor(0.0, 1.0, 1.0, 1.0);
     convex_hull_->setLineWidth(0.01);
   }
+
+  this->setColor(color);
+}
+
+void
+OrkTableVisual::setColor(const Ogre::ColourValue& color)
+{
+  arrow_->setColor(color);
+  convex_hull_->setColor(color.r, color.g, color.b, 1.0);
 }
 
 // Position and orientation are passed through to the SceneNode.
