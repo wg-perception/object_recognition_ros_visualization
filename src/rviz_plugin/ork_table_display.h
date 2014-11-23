@@ -32,6 +32,8 @@
 
 #include <rviz/message_filter_display.h>
 
+#include <rviz/properties/color_property.h>
+
 #include <object_recognition_msgs/TableArray.h>
 
 namespace object_recognition_ros
@@ -61,9 +63,10 @@ protected:
   // A helper to clear this display back to the initial state.
   virtual void
   reset();
-
-  // Function to handle an incoming ROS message.
+private Q_SLOTS:
+  void updateColor();
 private:
+  // Function to handle an incoming ROS message.
   void
   processMessage(const object_recognition_msgs::TableArrayConstPtr& msg);
 
@@ -76,6 +79,8 @@ private:
   rviz::BoolProperty *do_display_bounding_box_;
   /** flag indicating whether the table top should be displayed */
   rviz::BoolProperty *do_display_top_;
+  /** color of the tables */
+  rviz::ColorProperty *table_color_;
 };
 
 }

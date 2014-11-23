@@ -38,6 +38,7 @@ class Quaternion;
 class SceneManager;
 class SceneNode;
 class Vector3;
+class ColourValue;
 }
 
 namespace rviz
@@ -70,7 +71,10 @@ public:
    */
   void
   setMessage(const object_recognition_msgs::Table& table, bool do_display_hull, bool do_display_bounding_box,
-             bool do_display_top);
+             bool do_display_top, const Ogre::ColourValue& color);
+
+  void
+  setColor(const Ogre::ColourValue& color);
 
   // Set the pose of the coordinate frame the message refers to.
   // These could be done inside setMessage(), but that would require

@@ -43,6 +43,7 @@ OrkTableDisplay::OrkTableDisplay()
   do_display_bounding_box_ = new rviz::BoolProperty("Bounding Box", false,
                                                     "Displays the Bounding box or not.", this);
   do_display_top_ = new rviz::BoolProperty("Top", true, "Displays the top of the table or not.", this);
+  table_color_ = new rviz::ColorProperty("Color", QColor( 0, 255, 255 ), "Color of the table.", this, SLOT( updateColor() ));
 }
 
 // After the top-level rviz::Display::initialize() does its own setup,
@@ -86,7 +87,7 @@ OrkTableDisplay::processMessage(const object_recognition_msgs::TableArrayConstPt
 
     boost::shared_ptr<OrkTableVisual> &visual = visuals_[i_msg];
     visual->setMessage(table, do_display_hull_->getBool(), do_display_bounding_box_->getBool(),
-                       do_display_top_->getBool());
+                       do_display_top_->getBool(), table_color_->getOgreColor() );
 
     Ogre::Quaternion orientation;
     Ogre::Vector3 position;
@@ -101,6 +102,15 @@ OrkTableDisplay::processMessage(const object_recognition_msgs::TableArrayConstPt
   }
   visuals_.resize(msg->tables.size());
 }
+
+void OrkTableDisplay::updateColor()
+{
+  Ogre::ColourValue oc= table_color_->getOgreColor();
+  for(size_t i= 0; i < visuals_.size(); ++i) {
+    visuals_[i]->setColor(oc);
+  }
+}
+
 }  // end namespace object_recognition_ros
 
 // Tell pluginlib about this class.  It is important to do this in
