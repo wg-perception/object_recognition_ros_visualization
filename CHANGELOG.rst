@@ -2,8 +2,8 @@
 Changelog for package object_recognition_ros_visualization
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+0.3.6 (2014-12-21)
+------------------
 * Merge pull request `#3 <https://github.com/wg-perception/object_recognition_ros_visualization/issues/3>`_ from v4hn/colorful-tables
   Add color property to table display
 * Add color property to table display
