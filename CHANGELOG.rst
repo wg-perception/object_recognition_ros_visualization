@@ -2,6 +2,20 @@
 Changelog for package object_recognition_ros_visualization
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Merge pull request `#3 <https://github.com/wg-perception/object_recognition_ros_visualization/issues/3>`_ from v4hn/colorful-tables
+  Add color property to table display
+* Add color property to table display
+  Now tables can have different colors.
+  This is helpful if you get tables from different sources...
+* Merge pull request `#2 <https://github.com/wg-perception/object_recognition_ros_visualization/issues/2>`_ from v4hn/moc-boost-1.57
+  Fix build with qt4's moc & boost 1.57
+* Fix build with qt4's moc & boost 1.57
+  This is a common workaround to make sure moc doesn't see
+  preprocessorvariables it doesn't like in boost...
+* Contributors: Michael Görner, Vincent Rabaud
+
 0.3.5 (2014-09-20)
 ------------------
 * remove useless dependency
