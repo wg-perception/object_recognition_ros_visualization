@@ -131,7 +131,8 @@ OrkTableVisual::setMessage(const object_recognition_msgs::Table& table, bool do_
   if (do_display_hull) {
     for (size_t i = 0; i < table.convex_hull.size(); ++i)
       convex_hull_->addPoint(Ogre::Vector3(table.convex_hull[i].x, table.convex_hull[i].y, 0));
-    convex_hull_->addPoint(Ogre::Vector3(table.convex_hull[0].x, table.convex_hull[0].y, 0));
+    if (table.convex_hull.size() > 0)
+      convex_hull_->addPoint(Ogre::Vector3(table.convex_hull[0].x, table.convex_hull[0].y, 0));
     convex_hull_->setLineWidth(0.01);
   }
 
