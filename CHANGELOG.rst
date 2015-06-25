@@ -2,6 +2,14 @@
 Changelog for package object_recognition_ros_visualization
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Merge pull request `#4 <https://github.com/wg-perception/object_recognition_ros_visualization/issues/4>`_ from v4hn/fix-empty-hull-segfault
+  fix segfault when table with empty hull is received
+* fix segfault when table with empty hull is received
+* update conf file for docs
+* Contributors: Vincent Rabaud, v4hn
+
 0.3.6 (2014-12-21)
 ------------------
 * Merge pull request `#3 <https://github.com/wg-perception/object_recognition_ros_visualization/issues/3>`_ from v4hn/colorful-tables
