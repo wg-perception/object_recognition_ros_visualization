@@ -100,7 +100,12 @@ void OrkObjectDisplay::onInitialize() {
 
     // Check if we already have loaded the mesh
     object_recognition_core::prototypes::ObjectInfo object_info;
-    info_cache_.getInfo(object.type, object_info);
+    try {
+      info_cache_.getInfo(object.type, object_info);
+    } catch(...) {
+      ROS_WARN_STREAM("Object " << object.type.key << " not found in database.");
+      return;
+    }
 
     // Make the mesh be a resource
     std::string mesh_resource;
