@@ -2,8 +2,8 @@
 Changelog for package object_recognition_ros_visualization
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+0.3.8 (2016-04-24)
+------------------
 * work with Qt5
 * prevent a crash if object not in DB
 * Contributors: Vincent Rabaud
