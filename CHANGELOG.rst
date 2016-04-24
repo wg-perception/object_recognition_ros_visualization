@@ -2,6 +2,12 @@
 Changelog for package object_recognition_ros_visualization
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* work with Qt5
+* prevent a crash if object not in DB
+* Contributors: Vincent Rabaud
+
 0.3.7 (2015-06-25)
 ------------------
 * Merge pull request `#4 <https://github.com/wg-perception/object_recognition_ros_visualization/issues/4>`_ from v4hn/fix-empty-hull-segfault
