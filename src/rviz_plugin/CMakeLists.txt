@@ -1,7 +1,6 @@
 include_directories(SYSTEM ${catkin_INCLUDE_DIRS})
 
-find_package(Qt5Core QUIET)
-if(Qt5Core_FOUND)
+if(${catkin_VERSION} VERSION_GREATER "0.7.0")
 find_package(Qt5Core)
 find_package(Qt5Gui)
 
@@ -27,7 +26,7 @@ add_library(${PROJECT_NAME} ${SOURCE_FILES})
 target_link_libraries(${PROJECT_NAME} ${catkin_LIBRARIES}
                                            ${QT_LIBRARIES}
 )
-if(NOT Qt4_FOUND)
+if(${catkin_VERSION} VERSION_GREATER "0.7.0")
 target_link_libraries(${PROJECT_NAME} Qt5::Core Qt5::Gui)
 endif()
 
