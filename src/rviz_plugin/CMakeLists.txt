@@ -9,9 +9,13 @@ qt5_wrap_cpp(MOC_FILES
   ork_table_display.h
 )
 else()
-find_package(Qt4 COMPONENTS QtCore QtGui QUIET)
+find_package(Qt4 COMPONENTS QtCore QtGui REQUIRED)
 include(${QT_USE_FILE})
 add_definitions(-DQT_NO_KEYWORDS)
+qt4_wrap_cpp(MOC_FILES
+  ork_object_display.h
+  ork_table_display.h
+)
 endif()
 
 set(SOURCE_FILES
