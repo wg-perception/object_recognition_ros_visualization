@@ -2,6 +2,14 @@
 Changelog for package object_recognition_ros_visualization
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* fix compilation with Qt4
+  This fixes https://github.com/wg-perception/object_recognition_core/issues/39
+* only enable Qt5 for Kinetic
+  This fixes `#5 <https://github.com/wg-perception/object_recognition_ros_visualization/issues/5>`_
+* Contributors: Vincent Rabaud
+
 0.3.8 (2016-04-24)
 ------------------
 * work with Qt5
